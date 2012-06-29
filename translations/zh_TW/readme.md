@@ -1,7 +1,7 @@
-# Principles of Writing Consistent, Idiomatic JavaScript
+# 撰寫易懂且一致姓的 JavaScript 原則
 
 
-## This is a living document and new ideas for improving the code around us are always welcome. Contribute: fork, clone, branch, commit, push, pull request.
+## This is a living document and new ideas for improving the code around us are always welcome. 貢獻文件: fork, clone, branch, commit, push, pull request.
 
 * Rick Waldron [@rwaldron](http://twitter.com/rwaldron), [github](https://github.com/rwldrn)
 * Mathias Bynens [@mathias](http://twitter.com/mathias), [github](https://github.com/mathiasbynens)
@@ -22,9 +22,10 @@
 * Mihai Paun [@mihaipaun](http://twitter.com/mihaipaun), [github](https://github.com/mihaipaun)
 * Evgeny Mandrikov [@\_godin\_](http://twitter.com/_godin_), [github](https://github.com/Godin)
 * Sofish Lin [@sofish](http://twitter.com/sofish), [github](https://github.com/sofish)
+* Bo-Yi Wu [@appleboy](http://twitter.com/appleboy), [github](https://github.com/appleboy)
 
 
-## All code in any code-base should look like a single person typed it, no matter how many people contributed.
+## 不管有多人程式設計師共同維護，程式碼就會看起來像是同一個人維護。
 
 ### The following list outlines the practices that I use in all code that I am the original author of; contributions to projects that I have created should follow these guidelines.
 
@@ -40,7 +41,7 @@
 >_Idan_ _Gazit_
 
 
-## Translations
+## 翻譯版本
 
 * [German](https://github.com/rwldrn/idiomatic.js/tree/master/translations/de_DE)
 * [French](https://github.com/rwldrn/idiomatic.js/tree/master/translations/fr_FR)
@@ -52,11 +53,12 @@
 * [Russian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ru_RU)
 * [Romanian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ro_RO)
 * [简体中文](https://github.com/rwldrn/idiomatic.js/tree/master/translations/zh_CN)
+* [繁體中文](https://github.com/rwldrn/idiomatic.js/tree/master/translations/zh_TW)
 
 
-## Important, Non-Idiomatic Stuff:
+## 重要且常用的資源:
 
-### Code Quality Tools, Resources & References
+### 程式碼品質工具，資源，參考文獻
 
  * [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
  * [jsPerf](http://jsperf.com/)
@@ -66,7 +68,7 @@
  * [jshint](http://jshint.com/)
  * [jslint](http://jslint.org/)
 
-## Get Smart
+## 聰明點
 
 ### [Annotated ECMAScript 5.1](http://es5.github.com/)
 ### [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
@@ -105,7 +107,7 @@ Projects _must_ include some form of unit, reference, implementation or function
  * [Buster.js](http://busterjs.org/)
  * [Sinon.js](http://sinonjs.org/)
 
-## Table of Contents
+## 目錄
 
  * [Whitespace](#whitespace)
  * [Beautiful Syntax](#spacing)
@@ -123,7 +125,7 @@ Projects _must_ include some form of unit, reference, implementation or function
 ------------------------------------------------
 
 
-## Preface
+## 前言
 
 The following sections outline a _reasonable_ style guide for modern JavaScript development and are not meant to be prescriptive. The most important take-away is the **law of code style consistency**. Whatever you chose as the style for your project should be considered law. Link to this document as a statement of your project's commitment to code style consistency, readability and maintainability.
 
@@ -131,31 +133,31 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
 
-## Idiomatic Style Manifesto
+## 慣用風格指南
 
 
-1. <a name="whitespace">Whitespace</a>
-  - Never mix spaces and tabs.
-  - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
-      - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
-  - If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
-      - Enforced consistency
-      - Eliminating end of line whitespace
-      - Eliminating blank line whitespace
-      - Commits and diffs that are easier to read
+1. <a name="whitespace">空白鍵</a>
+  - 永遠都不要混用空格跟 Tab。
+  - 在開始一個專案及撰寫程式碼之前，您要先選擇空格(spaces)或 Tab (real tabs)縮排坊式，這點非常**重要**。
+      - 為了可閱讀性，我個人建議設定編輯器縮排為兩個字母寬度，這意味著兩個空白或者是一個 Tab 取代兩個空白。
+  - 假如您的編輯器支援顯示特殊字元(show invisibles)，請務必將此功能打開，好處是：
+      - 程式碼一致性
+      - 去除行末空白
+      - 去除空行空格
+      - 更容易閱讀提交檔案或者是 Diff 資料
 
 
-2. <a name="spacing">Beautiful Syntax</a>
+2. <a name="spacing">美化語法</a>
 
-    A. Parens, Braces, Linebreaks
+    A. 小括號, 大括號, 換行符號
 
     ```javascript
 
-    // if/else/for/while/try always have spaces, braces and span multiple lines
-    // this encourages readability
+    // if/else/for/while/try 通常都帶有空白，小括號，多行程式碼
+    // 這裡有助於可閱讀性
 
     // 2.A.1.1
-    // Examples of really cramped syntax
+    // 不易閱讀語法範例
 
     if(condition) doSomething();
 
@@ -165,64 +167,64 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
     // 2.A.1.1
-    // Use whitespace to promote readability
+    // 插入空白提高閱讀性
 
     if ( condition ) {
-      // statements
+      // 語法
     }
 
     while ( condition ) {
-      // statements
+      // 語法
     }
 
     for ( var i = 0; i < 100; i++ ) {
-      // statements
+      // 語法
     }
 
-    // Even better:
+    // 更好方法:
 
     var i,
       length = 100;
 
     for ( i = 0; i < length; i++ ) {
-      // statements
+      // 語法
     }
 
-    // Or...
+    // 或...
 
     var i = 0,
       length = 100;
 
     for ( ; i < length; i++ ) {
-      // statements
+      // 語法
     }
 
     var prop;
 
     for ( prop in object ) {
-      // statements
+      // 語法
     }
 
 
     if ( true ) {
-      // statements
+      // 語法
     } else {
-      // statements
+      // 語法
     }
     ```
 
 
-    B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
+    B. 賦予值, 宣告， 函式 ( 命名, 表示, 建構子 )
 
     ```javascript
 
     // 2.B.1.1
-    // Variables
+    // 變數
     var foo = "bar",
       num = 1,
       undef;
 
-    // Literal notations:
+    // 文字符號:
     var array = [],
       object = {};
 
@@ -231,18 +233,18 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // Using only one `var` per scope (function) promotes readability
     // and keeps your declaration list free of clutter (also saves a few keystrokes)
 
-    // Bad
+    // 不好
     var foo = "";
     var bar = "";
     var qux;
 
-    // Good
+    // 好
     var foo = "",
       bar = "",
       quux;
 
-    // or..
-    var // Comment on these
+    // 或..
+    var // 註解請寫這裡
     foo = "",
     bar = "",
     quux;
@@ -251,43 +253,43 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // var statements should always be in the beginning of their respective scope (function).
     // Same goes for const and let from ECMAScript 6.
 
-    // Bad
+    // 不好
     function foo() {
 
-      // some statements here
+      // 註解在這裡
 
       var bar = "",
         qux;
     }
 
-    // Good
+    // 好
     function foo() {
       var bar = "",
         qux;
 
-      // all statements after the variables declarations.
+      // 所有的註解寫在變數宣告後面。
     }
     ```
 
     ```javascript
 
     // 2.B.2.1
-    // Named Function Declaration
+    // 函式命名宣告
     function foo( arg1, argN ) {
 
     }
 
-    // Usage
+    // 使用方式
     foo( arg1, argN );
 
 
     // 2.B.2.2
-    // Named Function Declaration
+    // 函式命名宣告
     function square( number ) {
       return number * number;
     }
 
-    // Usage
+    // 使用方式
     square( 10 );
 
     // Really contrived continuation passing style
@@ -296,12 +298,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     }
 
     square( 10, function( square ) {
-      // callback statements
+      // callback 內容
     });
 
 
     // 2.B.2.3
-    // Function Expression
+    // 函式表示
     var square = function( number ) {
       // Return something valuable and relevant
       return number * number;
@@ -320,13 +322,13 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
     // 2.B.2.4
-    // Constructor Declaration
+    // 建構子宣告
     function FooBar( options ) {
 
       this.options = options;
     }
 
-    // Usage
+    // 使用方式
     var fooBar = new FooBar({ a: "alpha" });
 
     fooBar.options;
@@ -335,28 +337,28 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```
 
 
-    C. Exceptions, Slight Deviations
+    C. 例外處理, Slight Deviations
 
     ```javascript
 
     // 2.C.1.1
-    // Functions with callbacks
+    // 帶有 callbacks 函式
     foo(function() {
       // Note there is no extra space between the first paren
       // of the executing function call and the word "function"
     });
 
-    // Function accepting an array, no space
+    // 函式可以傳入陣列不需要空白
     foo([ "alpha", "beta" ]);
 
     // 2.C.1.2
-    // Function accepting an object, no space
+    // 函式可以傳入物件不需要空白
     foo({
       a: "alpha",
       b: "beta"
     });
 
-    // Single argument string literal, no space
+    // 單一參數直接帶入，不需要空白
     foo("bar");
 
     // Inner grouping parens, no space
